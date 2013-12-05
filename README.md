@@ -3,6 +3,8 @@
  目前测试兼容IE6+
  
  DEMO :http://wvovo.com/ngSea/#/
+ 
+ 有任何问题请在这里留言:https://github.com/ckken/ngSea/issues/1
 
 * ngSea by KenZR email ckken@qq.com
  * Create time 2013/12/5
@@ -58,5 +60,7 @@ Run 期间引入$ngSea 赋值
 
 
 如果选择兼容requireJs 或者不考虑IE7一下的话
+
 可以考虑天猪的版本 :https://github.com/ckken/angular-lazyload
+
 我的版本只支持SEAjs
