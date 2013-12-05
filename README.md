@@ -1,4 +1,4 @@
-<h1>Angularjs 1.0.8 + Seajs 插件</h1>
+<h1>Angularjs 1.0.8 + Seajs 按需加载插件</h1>
  
  目前测试兼容IE6+
  
@@ -57,5 +57,6 @@ Run 期间引入$ngSea 赋值
 </pre>
 
 
-如果选择兼容requireJs 不靠谱IE7一下的话可以考虑天猪的版本 :https://github.com/ckken/angular-lazyload
+如果选择兼容requireJs 或者不考虑IE7一下的话
+可以考虑天猪的版本 :https://github.com/ckken/angular-lazyload
 我的版本只支持SEAjs
