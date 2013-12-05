@@ -1,8 +1,8 @@
 /**
  * ngSea by KenZR email ckken@qq.com
  * Create time 2013/12/5
- * support in IE6 about with the Angular 1.0.8 (because the 1.2.3 not support in IE 7)
- * use it inject ngSea And in run use app = $ngSea(app); that's all
+ * support in IE6 with  the Angular 1.0.8 (because the Angular 1.2.3 not support in lt IE 7)
+ * use it inject ngSea And run use app = $ngSea(app); have fun
  * Contact us: QQ 117692258
  */
 angular.module('ngSea', [], ["$controllerProvider", "$compileProvider", "$filterProvider", "$provide", function ($controllerProvider, $compileProvider, $filterProvider, $provide) {
