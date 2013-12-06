@@ -1,4 +1,6 @@
-<h1>Angularjs 1.0.8 + Seajs 按需加载插件</h1>
+<h1>ngSea version 0.2.1<h1>
+
+<h2>Angularjs 1.0.8 + Seajs 按需加载插件</h2>
  
  目前测试兼容IE6+
  
