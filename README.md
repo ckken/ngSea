@@ -1,4 +1,18 @@
 <h1>ngSea version 0.2.1</h1>
+
+<h3>Angularjs 1.2.7 + Seajs 按需加载插件</h3>
+angular 1.2.7 支持IE8+ 如需支持IE7 需要关闭 $sceProvider
+ 
+<pre>
+ angular.module('ie7support', []).config(function($sceProvider) {
+        $sceProvider.enabled(false);
+    });
+    然后注入 ie7support
+</pre>
+ 
+ 
+ DEMO http://wvovo.com/ngSea/index.1.2.7.html
+
 <h3>Angularjs 1.0.8 + Seajs 按需加载插件</h3>
  目前测试兼容IE6+
  
