@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/ckken/ngsea.png?label=ready&title=Ready)](https://waffle.io/ckken/ngsea)
 <h1>ngSea version 0.2.1</h1>
 
 <h3>Angularjs 1.2.7 + Seajs 按需加载插件</h3>
