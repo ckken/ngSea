@@ -6,16 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
 <body>
-<div><a href="#/t1">t1</a> <a href="#/t2">t2</a> </div>
-<div ng-view></div>
-<script src="app/ie/json2.js"></script>
+   <!-- <div>
+   <a href="#/main">main</a> | <a href="#test/a">testA</a> | <a href="#test/b/123">testB</a>
+  </div>
+  <div><a href="#/t1">t1</a> <a href="#/t2/23423434">t2</a> </div> -->
+
+<div>
+ <a href="#/">home</a>
+  <a href="#/main">main</a>
+    <a href="#/multi">multi</a>
+</div>
+
+    <div ui-view></div>
+  <div ui-view="viewA"></div>
+  <div ui-view="viewAB"></div>
+
+<!--   <ui-view id="view" data-ng-view data-ng-cloak></ui-view>
+  <ui-view name="viewA"></ui-view>
+  <ui-view name="viewAB"></ui-view> -->
+
+
 <script src="app/seajs/sea.js"></script>
-<script src="app/angularjs/angular1.0.8/angular.js"></script>
-<script src="app/angularjs/angular-ngSea.js"></script>
+<script src="app/angularjs/angular1.3.5/angular.js"></script>
+<script src="app/angularjs/angular1.3.5/angular-ui-router.js"></script>
+<!--<script src="app/angularjs/ngSea-0.6.1.js"></script>-->
+   <script src="app/angularjs/ngSea-ui-route.js"></script>
 <script>
     // seajs config
+    var G = {}
+    G.path ={
+        root:'./',
+        mod:'./mod'
+    }
     seajs.config({
-        base: './app/mod/'
+        base: G.path.root
     });
 
     seajs.on('error', function(module){
@@ -25,7 +49,7 @@
     });
 
     //Step2: bootstrap youself
-    seajs.use(['app'], function(app){
+    seajs.use(['mod/app'], function(app){
         angular.bootstrap(document, ['app']);
     });
 </script>

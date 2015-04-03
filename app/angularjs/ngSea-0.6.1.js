@@ -26,7 +26,7 @@ angular.module('ngSea', [], ["$controllerProvider", "$compileProvider", "$filter
             }
 
 
-            app.register = {
+            var register = {
                 controller: $controllerProvider.register,
                 directive: $compileProvider.directive,
                 filter: $filterProvider.register,
@@ -35,7 +35,7 @@ angular.module('ngSea', [], ["$controllerProvider", "$compileProvider", "$filter
                 decorator: $provide.decorator
             }
 
-            config = angular.extend(setting,setting);
+            config = angular.extend(config,setting);
 
 
             var _route_run = {}
@@ -52,7 +52,7 @@ angular.module('ngSea', [], ["$controllerProvider", "$compileProvider", "$filter
                                 if(angular.isUndefined(m)){
                                     deferred.reject(m);
                                 }else{
-                                    deferred.resolve(angular.isFunction(m) ? m(app) : m);
+                                    deferred.resolve(angular.isFunction(m) ? m(register,app) : m);
                                 }
                             });
                         });

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>angular-lazyload-showcase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body>
+<div><a href="#/t1">t1</a> <a href="#/t2">t2</a> </div>
+<div ng-view></div>
+<script src="app/ie/json2.js"></script>
+<script src="app/seajs/sea.js"></script>
+<script src="app/angularjs/angular1.0.8/angular.js"></script>
+<script src="app/angularjs/angular-ngSea.js"></script>
+<script>
+    // seajs config
+    seajs.config({
+        base: './app/mod/'
+    });
+
+    seajs.on('error', function(module){
+        if(module.status!=5){
+            console.error('seajs error: ', module);
+        }
+    });
+
+    //Step2: bootstrap youself
+    seajs.use(['app'], function(app){
+        angular.bootstrap(document, ['app']);
+    });
+</script>
+</body>
+</html>

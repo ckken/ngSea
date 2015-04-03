@@ -15,6 +15,27 @@ define(function (require, exports, module) {
                 }
             })
 
+            .state('multi',{
+                url: "/multi",
+                views:{
+                    "":{
+                        controller: 'main',
+                        templateUrl: G.path.mod+'/main/main.html',
+                        controllerUrl: G.path.mod+'/main/main.js'
+                    },
+                    "viewA":{
+                        controller: 'multi',
+                        templateUrl: G.path.mod+'/main/multi.html',
+                        controllerUrl: G.path.mod+'/main/multi.js'
+                    },
+                    "viewAB":{
+                        controller: 'main',
+                        templateUrl: G.path.mod+'/main/main.html',
+                        controllerUrl: G.path.mod+'/main/main.js'
+                    }
+                }
+            })
+
             .state('home', {
               url: "/",
                 controller: function ($scope, $location) {
@@ -29,7 +50,7 @@ define(function (require, exports, module) {
 
     app.run(function ($rootScope, $ngSea) {
 
-        app = $ngSea(app,{
+        $ngSea(app,{
             route_start:'$stateChangeStart',
             mod_root:G.path.mod
         });
