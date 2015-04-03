@@ -9,9 +9,6 @@
 目前还在通过测试用例中 有兴趣的可以先测试
 访问 ui.html 进行测试
 
-
-
-
 <h3>IE8 + Angularjs 1.2.* + Seajs +ng-route</h3>
  DEMO http://wvovo.com/ngSea/index.1.2.7.html
  
